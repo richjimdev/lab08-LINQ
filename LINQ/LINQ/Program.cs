@@ -37,7 +37,18 @@ namespace LINQ
 
             var neighborhoods = data.Features.Select(x => x).Select(x => x.Properties).Select(x => x.Neighborhood);
 
+            Console.WriteLine("============ Here are all the neighborhoods in Manhattan:");
             foreach (var item in neighborhoods)
+            {
+                Console.WriteLine(item);
+            }
+
+            var validNeighborhoods = from results in neighborhoods
+                                     where results.Length > 0
+                                     select results;
+
+            Console.WriteLine("============ Here are all the VALID neighborhoods in Manhattan:");
+            foreach (var item in validNeighborhoods)
             {
                 Console.WriteLine(item);
             }
