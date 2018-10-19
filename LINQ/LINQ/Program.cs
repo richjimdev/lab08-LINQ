@@ -73,6 +73,14 @@ namespace LINQ
             {
                 Console.WriteLine(item);
             }
+
+            var validNeighborhoodsInLambda = neighborhoods.Where(x => x.Length > 0);
+
+            Console.WriteLine("============ Here the last question, using lamda instead of LINQ:");
+            foreach (var item in validNeighborhoods)
+            {
+                Console.WriteLine(item);
+            }
         }
     }
 }
