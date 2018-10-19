@@ -61,6 +61,18 @@ namespace LINQ
             {
                 Console.WriteLine(item);
             }
+
+            var allInOne = data.Features.Select(x => x)
+                            .Select(x => x.Properties)
+                            .Select(x => x.Neighborhood)
+                            .Where(x => x.Length > 0)
+                            .Distinct();
+
+            Console.WriteLine("============ Here is the same result, using only one query:");
+            foreach (var item in allInOne)
+            {
+                Console.WriteLine(item);
+            }
         }
     }
 }
