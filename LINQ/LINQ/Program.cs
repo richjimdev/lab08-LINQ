@@ -52,6 +52,15 @@ namespace LINQ
             {
                 Console.WriteLine(item);
             }
+
+            var distinctNeighborhoods = validNeighborhoods.Select(place => place)
+                                         .Distinct();
+
+            Console.WriteLine("============ Here are all the DISTINCT neighborhoods in Manhattan:");
+            foreach (var item in distinctNeighborhoods)
+            {
+                Console.WriteLine(item);
+            }
         }
     }
 }
