@@ -4,6 +4,9 @@ using System.Text;
 
 namespace LINQ.Classes
 {
+    /// <summary>
+    /// This will grab all property information insdie the feature lists
+    /// </summary>
     public class Properties
     {
         public string Zip { get; set; }

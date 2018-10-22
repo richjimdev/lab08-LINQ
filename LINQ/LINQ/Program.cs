@@ -11,10 +11,12 @@ namespace LINQ
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
             JsonConversion();
         }
 
+        /// <summary>
+        /// Grabbing the info from a JSON file, turning it into c# and filtering out data depending on what we need.
+        /// </summary>
         static void JsonConversion()
         {
             string path = "../../../data.json";
